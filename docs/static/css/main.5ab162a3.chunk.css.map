@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/stylesheets/App.css"],"names":[],"mappings":"AAAA,cACE,eACF","file":"main.5ab162a3.chunk.css","sourcesContent":[".Pokemon-List {\r\n  list-style: none;\r\n}\r\n"]}
