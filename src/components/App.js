@@ -7,11 +7,11 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <header>
-          <h1>Mi lista de Pokemon</h1>
+        <header className="header">
+          <h1 classNAme="title">Mi lista de Pokemon</h1>
         </header>
-        <main>
-          <div>
+        <main className="main">
+          <div className="container">
             <PokeList pokemonsData={pokemonsData} />
           </div>
         </main>

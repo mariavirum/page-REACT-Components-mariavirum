@@ -5,7 +5,7 @@ function Pokemon(props) {
     return <li key={id}>{type}</li>;
   });
   return (
-    <article>
+    <article className="pokemon-container">
       <div>
         <img src={props.pokemonsProp.url} />
       </div>
