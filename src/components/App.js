@@ -1,9 +1,16 @@
-import React from "react";
 import "../stylesheets/App.css";
+import data from "../data/data.json";
 import PokeList from "./PokeList";
-import pokemonsData from "../data/data.json";
+import React from "react";
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      pokemons: data,
+    };
+  }
+
   render() {
     return (
       <>
@@ -12,7 +19,7 @@ class App extends React.Component {
         </header>
         <main className="main">
           <div className="container">
-            <PokeList pokemonsData={pokemonsData} />
+            <PokeList pokemons={this.state.pokemons} />
           </div>
         </main>
         <footer></footer>
@@ -20,4 +27,5 @@ class App extends React.Component {
     );
   }
 }
+
 export default App;
