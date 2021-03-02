@@ -14,15 +14,15 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <header className="header">
-          <h1 classNAme="title">Mi lista de Pokemon</h1>
-        </header>
-        <main className="main">
-          <div className="container">
-            <PokeList pokemons={this.state.pokemons} />
-          </div>
-        </main>
-        <footer></footer>
+        <div className="page">
+          <header className="header"></header>
+          <main className="main">
+            <h1 className="title">Mi lista de Pokemon</h1>
+            <div className="container">
+              <PokeList pokemons={this.state.pokemons} />
+            </div>
+          </main>
+        </div>
       </>
     );
   }

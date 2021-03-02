@@ -3,21 +3,28 @@ import PropTypes from "prop-types";
 
 function Pokemon(props) {
   const itemPokemon = props.pokemonsProp.types.map((type, id) => {
-    return <li key={id}>{type}</li>;
+    return (
+      <li className="typeitems" key={id}>
+        {type}
+      </li>
+    );
   });
   return (
     <article className="pokemon-container">
       <div>
-        <img src={props.pokemonsProp.url} />
+        <img className="imageCard" src={props.pokemonsProp.url} />
       </div>
-      <h4>{props.pokemonsProp.name}</h4>
-      <ul>{itemPokemon}</ul>
+      <h4 className="titlecard">{props.pokemonsProp.name}</h4>
+      <ul className="typelist">{itemPokemon}</ul>
     </article>
   );
 }
 
 Pokemon.propTypes = {
-  url: PropTypes.string,
-  name: PropTypes.string,
+  pokemonsProp: PropTypes.shape({
+    url: PropTypes.string,
+    name: PropTypes.string,
+  }),
 };
+
 export default Pokemon;
